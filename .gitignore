@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+.env
+
+# Java/Spring Boot
+target/
+*.log
+
+# VS Code
+.vscode/
+
+# OS Files
+.DS_Store
