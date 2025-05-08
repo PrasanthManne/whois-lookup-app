@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.service.WhoisLookupService;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/whois")
 @CrossOrigin(origins = "*")
 public class WhoisController {
 
     @Autowired
     private WhoisLookupService whoisLookupService;
 
-    @GetMapping("/api/whois")
+    @GetMapping
     public ResponseEntity<?> getWhoisData(@RequestParam String domain, @RequestParam String type) {
         try {
             String rawJson = whoisLookupService.fetchWhoisData(domain);
@@ -33,11 +33,5 @@ public class WhoisController {
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body("Error: " + e.getMessage());
         }
-    }
-
-    @GetMapping("/test")
-    public String sayHello()
-    {
-        return "hi";
     }
 }
