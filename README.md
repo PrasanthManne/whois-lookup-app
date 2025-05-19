@@ -25,7 +25,8 @@ This is a full-stack web application that allows users to search for domain regi
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/whois-lookup-app.git
+
+git clone https://github.com/PrasanthManne/whois-lookup-app.git
 cd whois-lookup-app
 ```
 
